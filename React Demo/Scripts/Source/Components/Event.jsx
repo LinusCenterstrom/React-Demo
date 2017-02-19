@@ -2,7 +2,7 @@
 import {connect} from "react-redux";
 import {toggleEvent} from "../Actions/eventActions.js";
 import Participant from "./Participant.jsx";
-import {getEventValue} from "../EventHelper.js";
+import {getEventSummary} from "../EventHelper.js";
 
 @connect()
 export default class Event extends React.Component {
@@ -21,9 +21,7 @@ export default class Event extends React.Component {
             return <Participant key={participantId} participant={Participants[participantId]}></Participant>;
         });
 
-        const numParticipants = Object.keys(Participants).length;
-
-        const { Cost, Income } = getEventValue(this.props.ev);
+        const { Cost, Income, ParticipantCount } = getEventSummary(this.props.ev);
 
         let cost = Cost + " kr";
         let income = Income + " kr";
@@ -36,8 +34,8 @@ export default class Event extends React.Component {
                 </div>
                 <div className="panel-body">
                     <div>
-                    Tillfällesnr: {Id}
-                    <img src={"https://www.legaonline.se/legaonline/images/small/user1.png"} alt="Antalet deltagare som uppfyller sökkriterierna" />{numParticipants}
+                    Tillfällesnr: <b>{Id}</b>
+                    <img style={{marginLeft: "20px"}} src={"https://www.legaonline.se/legaonline/images/small/user1.png"} alt="Antalet deltagare som uppfyller sökkriterierna" />{ParticipantCount}
                     </div>
                 <div className="row">
                     <div className="col-lg-9">

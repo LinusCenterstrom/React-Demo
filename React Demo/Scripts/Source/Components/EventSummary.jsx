@@ -1,6 +1,6 @@
 ﻿import React from "react";
 import {connect} from "react-redux";
-import {getEventValue} from "../EventHelper.js";
+import {getEventSummary} from "../EventHelper.js";
 
 const InfoGroup = ({ header, rows }) => {
     return (<table style={{width: "100%"}}>
@@ -26,13 +26,14 @@ export default class EventSummary extends React.Component {
         let cost = 0;
 
         const events = this.props.events;
-        const numEvents = events.length;
+        const numEvents = Object.keys(events).length;
         
         for (let id in events) {
             if (events.hasOwnProperty(id)) {
-                const { Income, Cost } = getEventValue(events[id]);
+                const { Income, Cost, ParticipantCount } = getEventSummary(events[id]);
                 income += Income;
                 cost += Cost;
+                numParticipants += ParticipantCount;
             }
         }
 
