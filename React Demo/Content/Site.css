@@ -18,5 +18,7 @@ textarea {
 
 .eventSummary {
     width: 200px;
+    position: fixed;
+    top: 50px;
 }
 
