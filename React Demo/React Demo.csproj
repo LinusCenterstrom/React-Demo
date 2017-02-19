@@ -94,8 +94,15 @@
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <None Include="Scripts\Source\Components\Event.jsx" />
+    <Content Include="Scripts\Source\Actions\eventActions.js" />
+    <None Include="Scripts\Source\Components\EventSummary.jsx" />
+    <Content Include="Scripts\Source\EventHelper.js" />
+    <Content Include="Scripts\Source\immutableHelpers.js" />
     <Content Include="Scripts\Source\index.js" />
     <Content Include="Scripts\Source\__tests__\event-reducer-tests.js" />
+    <Content Include="Scripts\Source\__tests__\eventActionTests.js" />
+    <Content Include="Scripts\Source\__tests__\immutableHelperTests.js" />
     <Content Include="webpack.config.js" />
     <Content Include=".babelrc" />
     <Content Include="package.json" />
@@ -119,7 +126,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Scripts\Source\event-reducer.js" />
-    <Content Include="Scripts\Source\hello-world.jsx" />
+    <Content Include="Scripts\Source\Components\Participant.jsx" />
+    <Content Include="Scripts\Source\Components\EventList.jsx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
