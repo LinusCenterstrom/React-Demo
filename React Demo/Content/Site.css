@@ -22,3 +22,6 @@ textarea {
     top: 50px;
 }
 
+.flagParticipant, .deleteParticipant {
+    cursor:pointer;
+}

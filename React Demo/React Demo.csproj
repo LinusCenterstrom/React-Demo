@@ -100,7 +100,7 @@
     <Content Include="Scripts\Source\EventHelper.js" />
     <Content Include="Scripts\Source\immutableHelpers.js" />
     <Content Include="Scripts\Source\index.js" />
-    <Content Include="Scripts\Source\__tests__\event-reducer-tests.js" />
+    <Content Include="Scripts\Source\__tests__\eventReducerTests.js" />
     <Content Include="Scripts\Source\__tests__\eventActionTests.js" />
     <Content Include="Scripts\Source\__tests__\immutableHelperTests.js" />
     <Content Include="webpack.config.js" />
@@ -125,7 +125,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Scripts\Source\event-reducer.js" />
+    <Content Include="Scripts\Source\eventReducer.js" />
     <Content Include="Scripts\Source\Components\Participant.jsx" />
     <Content Include="Scripts\Source\Components\EventList.jsx" />
     <None Include="Web.Debug.config">

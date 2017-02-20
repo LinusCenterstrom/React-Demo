@@ -13,13 +13,7 @@ const InfoGroup = ({ header, rows }) => {
                 </tbody>
             </table>);
     }
-
-@connect((store) => {
-    return {
-        events: store.events
-    }
-})
-export default class EventSummary extends React.Component {
+class EventSummary extends React.Component {
     render() {
         let numParticipants = 0;
         let income = 0;
@@ -77,3 +71,8 @@ export default class EventSummary extends React.Component {
     }  
 };
 
+export default EventSummary = connect((store) => {
+    return {
+        events: store.events
+    };
+})(EventSummary);

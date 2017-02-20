@@ -2,8 +2,7 @@
 import {removeParticipant, toggleParticipantFlag} from "../Actions/eventActions.js";
 import {connect} from "react-redux";
 
-@connect()
-export default class Participant extends React.Component {
+class Participant extends React.Component {
     constructor(props) {
         super(props);
 
@@ -35,9 +34,11 @@ export default class Participant extends React.Component {
                     <td>{LimDiscount}</td>
                     <td></td>
                     <td></td>
-                    <td><img onClick={this.handleFlag} src={flagImage} /></td>
-                    <td><img src={"https://www.legaonline.se/legaonline/images/small/garbage.gif"}  onClick={this.handleDelete} /></td>
+                    <td><img className="flagParticipant" onClick={this.handleFlag} src={flagImage} /></td>
+                    <td><img className="deleteParticipant" src={"https://www.legaonline.se/legaonline/images/small/garbage.gif"}  onClick={this.handleDelete} /></td>
                 </tr>
             );
     }
-}
+};
+
+export default Participant = connect()(Participant);

@@ -2,12 +2,7 @@
 import Event from "./Event.jsx";
 import {connect} from "react-redux";
 
-@connect((store) => {
-    return {
-        events: store.events
-    }
-})
-export default class EventList extends React.Component {
+class EventList extends React.Component {
     render() {
         const events = this.props.events;
         const eventList = Object.keys(events).map((key) => {
@@ -18,3 +13,9 @@ export default class EventList extends React.Component {
         return <div>{eventList}</div>;
     }
 }
+
+export default EventList = connect((store) => {
+    return {
+        events: store.events
+    };
+})(EventList);

@@ -4,8 +4,7 @@ import {toggleEvent} from "../Actions/eventActions.js";
 import Participant from "./Participant.jsx";
 import {getEventSummary} from "../EventHelper.js";
 
-@connect()
-export default class Event extends React.Component {
+class Event extends React.Component {
     constructor(props) {
         super(props);
         this.handleToggle = function() {
@@ -15,17 +14,18 @@ export default class Event extends React.Component {
         }.bind(this);
     }
     render() {
-        const { Id, Name, Price, Open, Participants } = this.props.ev;
+        const { ev } = this.props;
+        const { Id, Name, Price, Open, Participants } = ev;
         
         const participants = Object.keys(Participants).map(participantId => {
             return <Participant key={participantId} participant={Participants[participantId]}></Participant>;
         });
 
-        const { Cost, Income, ParticipantCount } = getEventSummary(this.props.ev);
+        const { Cost, Income, ParticipantCount } = getEventSummary(ev);
 
-        let cost = Cost + " kr";
-        let income = Income + " kr";
-        let sum = (Income - Cost) + " kr";
+        const cost = Cost + " kr";
+        const income = Income + " kr";
+        const sum = (Income - Cost) + " kr";
 
         return (
             <div className="panel panel-default">
@@ -108,3 +108,5 @@ export default class Event extends React.Component {
             </div>);
     }
 };
+
+export default Event = connect()(Event);

@@ -1,4 +1,4 @@
-﻿import EventReducer from "../event-reducer.js";
+﻿import EventReducer from "../eventReducer.js";
 import {removeParticipant, toggleParticipantFlag} from "../Actions/eventActions.js";
 
 describe("EventReducer", () => {

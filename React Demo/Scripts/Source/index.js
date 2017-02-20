@@ -2,7 +2,7 @@
 import ReactDOM from "react-dom";
 import {Provider, connect} from "react-redux";
 import {createStore} from "redux";
-import EventReducer from "./event-reducer.js";
+import EventReducer from "./eventReducer.js";
 import EventList from "./Components/EventList.jsx";
 import {Participant} from "./Components/Participant.jsx";
 import {addEvent} from "./Actions/eventActions.js";
